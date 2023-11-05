@@ -112,7 +112,7 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+  \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
@@ -433,7 +433,7 @@ This article briefly introduces the history behind the rise and popularity of th
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-RISC-V, opensource
+RISC-V, RISC, Computer Architecture
 \end{IEEEkeywords}
 
 
@@ -452,7 +452,9 @@ RISC-V, opensource
 \IEEEpeerreviewmaketitle
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% INTRODUCTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps.
@@ -469,26 +471,35 @@ RISC-V, opensource
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{S}{ystems-on-a-chip} (SoC) with integrated processors are becoming ubiquitous. One such SoC is a microcontroller. It is hard to find a electronic system without a microcontroller in it eg. IoT, appliances, watches, toys and so on. As shown figure-FIXME, a typical microcontroller consists of a core processor, a cache and various peripherals including  
+\IEEEPARstart{S}{ystems-on-a-chip} (SoC) with integrated processors are becoming ubiquitous. One such SoC is a microcontroller. It is hard to find a electronic system without a microcontroller in it eg. IoT, appliances, watches, toys and so on. They vary in complexity depending on the target applications. For example, Atmel's ATtiny series of microcontrollers are 8-bit processors starting with just 512-Bytes Flash and 32-Bytes of SRAM running at 10 MHz clock speed. On the other end of the spectrum are the STMicroelectronic's popular STM32 series microcontrollers which is based on Arm's Cortex-M 32-bit processor with up to 128 kB of L2 cache and and more than 600 kB of SRAM running at 650 MHz.
 
 %%FIGURE : uC
+\begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.95\linewidth]{image-uC.jpg}
+    \caption{Architecture of a microcontroller intended for wireless IoT nodes.}
+    \label{fig:uC}
+\end{figure}
 
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
+Fig.~\ref{fig:uC} shows an architecture of a microcontroller intended for IoT wireless nodes. It contains a core processor, a cache (SRAM), analog peripherals (bandgap voltage reference, temperature sensor and analog-to-digital converter(ADC) ), digital peripherals (UART, SPI, PWM), power management, clock management (PLL, crystal oscillator), and RF Radio (Bluetooth, WiFi, LoRa). Apart from the processor, all other blocks (typically called IPs) can either be designed from scratch by mixed-signal engineers or licensed from a vendor. When it comes to the processor, it gets a little complicated. You can use a very old instruction set architecture (ISA) and implement it in your target technology. One such popular ISA is Intel's 8051 microcontroller architecture developed in 1980s. It has been around for several decades and has proven to be reliable, efficient, and versatile. Its compact size, low power consumption, and wide range of peripherals make it a popular choice for many embedded systems applications. Additionally, there is a large community of developers and engineers who are familiar with the 8051 architecture, which makes it easier to find support and resources for development.
 
-\hfill mds
- 
-\hfill August 26, 2015
+Companies like Arm, IBM and Intel have very successful ISAs but patents on key aspects of their ISAs prevent others from using them without licenses which imposes a prohibitive cost for most educational, research organization or companies trying to target low-volume markets. 
+Note, ISA is neither an implementation of the hardware or the software (OS, drivers, compilers). It is a standardization of the interface specification so development tools and design implementations can be reused and shared provided they are open and free. And, both hardware and software can be implemented in three ways: proprietary, licensed open-source, or free open-source.
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+There are three free and open-source RISC ISAs currently available for use:
+\begin{enumerate}
+    \item \emph{SPARC V8} from Sun Microsystems that was made into a IEEE standard in 1994.
+    \item \emph{OpenRISC} is a GNU open-source effort started in 2000, with the 64-bit ISA being completed in 2011.
+    \item \emph{RISC-V} (pronounced "RISC 5") a BSD open-source effort started in 2010 at University of California at Berkeley by Krste Asanović, David A. Patterson and their graduate students Andrew Waterman and Yunsup Lee  partly inspired by ARM's IP restrictions together with the lack of 64-bit addresses and overall baroqueness of ARM v7.
+\end{enumerate}
 
-% needed in second column of first page if using \IEEEpubid
-%\IEEEpubidadjcol
+Before we look at the history of RISC-V and why it prospored compared to it's predecessors SPARC V8 and OpenRISC, it's worth taking a quick look at the history of microprocessors and how RISC has emerged as the goto architecture for power-conscious devices such as tablets, mobile phones and embedded systems.
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BRIEF HISTORY OF MICROPROCESSORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Brief History of Microprocessors}
+
 
 
 % An example of a floating figure using the graphicx package.
@@ -588,9 +599,6 @@ Subsubsection text here.
 
 
 
-\section{Conclusion}
-The conclusion goes here.
-
 
 
 
@@ -608,23 +616,6 @@ The conclusion goes here.
 % \subsection or using \label (\appendices by itself
 % starts a section numbered zero.)
 %
-
-
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
-
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
-
-
-% use section* for acknowledgment
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
 
 
 % Can use something like this to put references on a page
@@ -676,34 +667,6 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% You can push biographies down or up by placing
-% a \vfill before or after them. The appropriate
-% use of \vfill depends on what kind of text is
-% on the last page and whether or not the columns
-% are being equalized.
-
-%\vfill
-
-% Can be used to pull up biographies so that the bottom of the last one
-% is flush with the other column.
-%\enlargethispage{-5in}
 
 
 

@@ -100,7 +100,17 @@ This perfomance enhancement was result of RISC Instruction Set Architecture (ISA
 % The Emergence of RISC-V as Free, Open ISA 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The Emergence of RISC-V as Free, Open ISA }
-With the case for a free, open ISA and RISC emerging as the architecture of choice, the natural place to look for was an existing RISC free, open ISA. Before the formation of RISC-V, there were already two such ISAs: \emph{SPARC V8} from Sun Microsystems and \emph{OpenRISC}, a GNU open-source effort.   
+For an open-source ISA to be have a long and successful lifespan, the founders of RISC-V were wise to look for proven commercial record. That quickly eliminated some unsuccessful ones or ones that have slowly died down including \textit{stack} ISA, \textit{VLIW}, Multiflow, and any new CISC ISAs. While 80x86 had dominated the PC market, \textit{RISC-style} load-store ISAs date back to Seymour Cray's CDC 6600 and RISC had dominated the mobile and tablets of the postPC Era. So RISC naturally emerged as an free, open ISA. The founders and the community also felt the need of starting with a clean slate with a new RISC ISA to clean up some of the mistakes of its predecessors. Some of the learning from the mistakes were: \textit{leaving out essentials} like load/store byte or load/store half word in the initial MIPS I, \textit{making the ISA bulky} by including too much like register windows in SPARC, or \textit{micro-architectural dependent ISA} like the delayed branch in MIPS. 
+
+Given ISA longevity are in decades, it was essential to look at the future technology landscape to predict some essential features of this new ISA. Three technology platform seemed to dominate: Internet of Things (IoT), personal mobile devices, and Warehouse-Scale Computers (WSCs). To target these technologies, it will be essential to have four key features from the new ISA:
+\begin{itemize}
+    \item \textit{Base-plus-extension iSA} with a small core set of instructions for cost-sensitive applications, optional extensions with standard ISA additions to customize SoCs, and space for entirely new set of instructions application-specific SoCs.
+    \item \textit{Compact instruction set encoding} for cost sensitive applications like IoT demanding samller memory.
+    \item \textit{Quadruple-precision (QP) as well as SP and DP floating point} support for wide-ranging data-size requirements from WSCs to IoT.
+    \item \textit{128-bit addressing as well as 32-bit and 64-bit}.
+
+\end{itemize}
+
 
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.

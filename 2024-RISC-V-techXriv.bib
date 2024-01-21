@@ -97,8 +97,11 @@ The family was continued in 1996 with the enhanced 8-bit MCS-151 and the 8/16-bi
 @misc{noauthor_intel_2024,
 	title = {Intel 8080},
 	copyright = {Creative Commons Attribution-ShareAlike License},
-	url = {https://en.wikipedia.org/wiki/Intel\_8080},
-	abstract = {},
+	url = {https://en.wikipedia.org/wiki/intel\_8080},
+	abstract = {The Intel 8080 ("eighty-eighty") is the second 8-bit microprocessor designed and manufactured by Intel. It first appeared in April 1974 and is an extended and enhanced variant of the earlier 8008 design, although without binary compatibility. The initial specified clock rate or frequency limit was 2 MHz, with common instructions using 4, 5, 7, 10, or 11 cycles. As a result, the processor is able to execute several hundred thousand instructions per second. Two faster variants, the 8080A-1 (sometimes referred to as the 8080B) and 8080A-2, became available later with clock frequency limits of 3.125 MHz and 2.63 MHz respectively.
+The 8080 needs two support chips to function in most applications: the i8224 clock generator/driver and the i8228 bus controller. It is implemented in N-type metal–oxide–semiconductor logic (NMOS) using non-saturated enhancement mode transistors as loads thus demanding a +12 V and a −5 V voltage in addition to the main transistor–transistor logic (TTL) compatible +5 V.
+Although earlier microprocessors were commonly used in mass-produced devices such as calculators, cash registers, computer terminals, industrial robots, and other applications, the 8080 saw greater success in a wider set of applications, and is largely credited with starting the microcomputer industry. Several factors contributed to its popularity: its 40-pin package made it easier to interface than the 18-pin 8008, and also made its data bus more efficient; its NMOS implementation gave it faster transistors than those of the P-type metal–oxide–semiconductor logic (PMOS) 8008, while also simplifying interfacing by making it TTL-compatible; a wider variety of support chips were available; its instruction set was enhanced over the 8008; and its full 16-bit address bus (versus the 14-bit one of the 8008) enabled it to access 64 KB of memory, four times more than the 8008's range of 16 KB. It was used in the Altair 8800 and subsequent S-100 bus personal computers until it was replaced by the Z80 in this role, and was the original target CPU for CP/M operating systems developed by Gary Kildall.
+The 8080 directly influenced the later x86 architecture. Intel designed the 8086 to have its assembly language be similar enough to the 8080, with most instructions mapping directly onto each other, that transpiled 8080 assembly code could be executed on the 8086.},
 	language = {en},
 	urldate = {2024-01-21},
 	journal = {Wikipedia},
@@ -135,4 +138,23 @@ The family was continued in 1996 with the enhanced 8-bit MCS-151 and the 8/16-bi
 	url = {https://riscv.org/wp-content/uploads/2021/05/RISC-V-New-Era-04-19-2021.pptx},
 	author = {Redmond, Calista},
 	year = {2021},
+}
+
+@inproceedings{bachrach_chisel_2012,
+	address = {New York, NY, USA},
+	series = {{DAC} '12},
+	title = {Chisel: constructing hardware in a {Scala} embedded language},
+	isbn = {978-1-4503-1199-1},
+	shorttitle = {Chisel},
+	url = {https://doi.org/10.1145/2228360.2228584},
+	doi = {10.1145/2228360.2228584},
+	abstract = {In this paper we introduce Chisel, a new hardware construction language that supports advanced hardware design using highly parameterized generators and layered domain-specific hardware languages. By embedding Chisel in the Scala programming language, we raise the level of hardware design abstraction by providing concepts including object orientation, functional programming, parameterized types, and type inference. Chisel can generate a high-speed C++-based cycle-accurate software simulator, or low-level Verilog designed to map to either FPGAs or to a standard ASIC flow for synthesis. This paper presents Chisel, its embedding in Scala, hardware examples, and results for C++ simulation, Verilog emulation and ASIC synthesis.},
+	urldate = {2024-01-21},
+	booktitle = {Proceedings of the 49th {Annual} {Design} {Automation} {Conference}},
+	publisher = {Association for Computing Machinery},
+	author = {Bachrach, Jonathan and Vo, Huy and Richards, Brian and Lee, Yunsup and Waterman, Andrew and Avižienis, Rimas and Wawrzynek, John and Asanović, Krste},
+	month = jun,
+	year = {2012},
+	keywords = {CAD},
+	pages = {1216--1225},
 }

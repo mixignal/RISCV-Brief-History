@@ -121,9 +121,10 @@ Given that the longevity of ISA is in decades, it was essential to look at the f
     \item \textit{Base-plus-extension ISA} with a small core set of instructions for cost-sensitive applications, optional extensions with standard ISA additions to customize SoCs, and space for entirely new set of instructions application-specific SoCs.
     \item \textit{Compact instruction set encoding} for cost-sensitive applications such as IoT that require smaller memory.
     \item \textit{Quadruple-precision (QP) as well as SP and DP} support for wide-ranging data size requirements from WSCs to IoT.
-    \item \textit{128-bit addressing as well as 32-bit and 64-bit}.
-
+    \item \textit{128-bit addressing} as well as \textit{32-bit and 64-bit}.
 \end{itemize}
+
+In order to reduce the code size to about 50 to 60\% of RISC-V instructions in a program, RISC-V now has a 16 bit compressed instruction set \cite{waterman_risc-v_2015}. This extension, named “C”, aims to reduce the static and dynamic code size by adding a short 16-bit instruction encoding for common operations. The C extension can be added to any of the base ISAs (RV32, RV64, RV128), and it is compatible with all other standard instruction extensions.
 
 %%FIGURE : Free ISA score table
 \begin{figure}[htb]

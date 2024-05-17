@@ -19,13 +19,6 @@
 % git @ /home/srout/Dropbox/educational/Silicon/Journal-preprint/2023-texrxiv-RISCV-Brief-History
 
 %% Feedback from Dr. Chandra Shekhar 04/10/24
-%Saroj, I had a look at the RISC-V article today. It looks good, both content wise and presentation wise.
-%There are a few (really only a few) places where small grammatical corrections can be done. The rest is fine. RISC-V has also come up with a 16-bit ISA for reducing code size (and increasing code density) for cost and power sensitive embedded/IoT applications.
-%In August 2023 the first RISC-V PC "Roma laptop" featuring quad- core 1.5 GHz 64- bit CPU and a dual core GPU has been released to developers by DeepComputing and Xcalibyte, a Chinese company.
-%May be, you can look up and incorporate in the article.
-% Another development re. SiFive and Andes
-%https://www.eetimes.com/imagination-reveals-risc-v-processor-at-embedded-world-2024/
-% https://www.edn.com/fpga-integrates-hard-risc-v-cores/
 % https://www.renesas.com/us/en/products/microcontrollers-microprocessors/risc-v/r9a02g021-ultra-low-power-48mhz-mcu-renesas-risc-v-cpu-core?utm_campaign=s-p-mcu_riscv_gp-epsg-iotbd-ipm1-na&utm_source=google&utm_medium=cpc_txt&utm_content=pp&gad_source=1&gclid=CjwKCAjwoPOwBhAeEiwAJuXRhy32BLt_VCmevFGbn4qpvCAXzaoKXfkDHLAyAejmK6w050wACFcbKRoCqgEQAvD_BwE
 
 \documentclass[journal]{IEEEtran}
@@ -135,14 +128,34 @@ In order to reduce the code size to about 50 to 60\% of RISC-V instructions in a
 \end{figure}
 
 Fig.\ref{fig:score} tabulates the scores of the three free ISAs based on four criteria plus the list of critical compilers and OS ports. RISC-V meets all the intended requirements while being simple and clean. Because of these advantages, RISC-V gained a lot of momentum among the community and emerged as a clear winner as a choice for a free and open-source ISA. In particular, Chisel \cite{bachrach_chisel_2012} from Berkeley was a highly productive open hardware design system that became part of many silicon successes, making the case for RISC-V even stronger. 
+RISC-V continues to evolve, with the 2023 ratification of new specifications including RISC-V Profiles, Cryptography Extensions Volume II, and the IOMMU Architecture Specification.
+
+%https://riscv.org/announcements/2021/12/risc-v-celebrates-incredible-year-of-growth-and-progress-ratifying-multiple-technical-specifications-launching-new-education-programs-and-accelerating-broad-industry-adoption/
 
 The rise and popularity led to the RISC-V Foundation (www.riscv.org), a nonprofit corporation that was founded in 2015 to build an open and collaborative community of software and hardware innovators based on the RISC-V ISA. In November 2018, the RISC-V Foundation announced a joint collaboration with the Linux Foundation to provide operational, technical, and strategic support.
 
-The adoption of RISC-V cores in different industries is predicted to reach 62 billion cores by 2025. A study in 2020 showed almost a quarter of ASIC and FPGA projects incorporating RISC-V cores \cite{redmond_risc-v_2021}.
+Intel's announcement of \$1 billion fund to support RISC-V chip development highlights its rising significance. RISC-V chips are now being used in devices such as earbuds, hard drives, and AI processors, with over 10 billion cores shipped. Companies are also considering RISC-V for data centers and spacecraft.
+%https://www.technologyreview.com/2023/01/09/1064876/riscv-computer-chips-10-breakthough-technologies-2023/
+The adoption of RISC-V cores in different industries is predicted to reach 62 billion cores by 2025. A study in 2020 showed almost a quarter of ASIC and FPGA projects incorporating RISC-V cores \cite{redmond_risc-v_2021} and recent trends support this assertion.
+
+%https://www.eetimes.com/imagination-reveals-risc-v-processor-at-embedded-world-2024/
+Imagination Technologies' RISC-V APXM-6200 CPU, a 64-bit in-order processor with an 11-stage pipeline, is designed for consumer and industrial applications. It offers a high performance density, outperforming the Arm Cortex-A510 in integer performance at similar clock speeds. The inclusion of an SDK with AI libraries, a Visual Studio Code extension, and TEE certification partnerships underscores the increasing adoption of RISC-V in the industry.
+
+%https://www.edn.com/fpga-integrates-hard-risc-v-cores/
+The Titanium Ti375 FPGA by Efinix integrates a quad-core RISC-V, 370,000 logic elements, and features including a Linux-capable MMU, FPU, and custom instructions, making it ideal for AI and edge computing. It also contains a dual transceiver, LPDDR4 DRAM controller, and MIPI D-PHY, all fabricated with 16 nm technology.
+
+%http://riscv.org/news/2023/08/worlds-first-risc-v-laptop-roma-officially-delivered-8gb-ram-and-pre-installed-with-domestic-os/
+The Roma laptop, the first designed for RISC-V development, features a quad-core 1.5GHz 64-bit CPU, a dual-core GPU, 8GB RAM, 128GB eMMC storage, and a 1TB SSD. It runs on the multilingual openKylin OS, aimed at aiding developers in creating RISC-V software, signifying a significant advancement in the RISC-V ecosystem.
+
+%https://www.renesas.com/us/en/products/microcontrollers-microprocessors/risc-v/r9a02g021-ultra-low-power-48mhz-mcu-renesas-risc-v-cpu-core
+The R9A02G021 MCU, equipped with a 32-bit Renesas RISC-V core, 4 kB of data flash and 16 kB of ECC SRAM, is optimized for energy efficiency and performance. It includes extensive analog features, multiple timers, various serial interfaces, and regulated IOs. Renesas provides a robust ecosystem to support development, highlighting the RISC-V architecture's role in enhancing design flexibility across industries.
 
 %%Conclusion
 \section{Conclusion}
 The history thus far has clearly indicated in favor of RISC-V as a free and open ISA. It has created a great opportunity by removing barriers related to design risk, cost of entry, partner limitations, and supply chain. The RISC community took a united approach to learn from previous mistakes of open ISAs and created an ISA for longevity. Given the increasing success of RISC-V, it can be safely envisioned to be the choice of ISA for most power-conscious and those with costs, including IoT, WSC, and mobile devices.  
+
+
+
 
 
 %%Bibliography

@@ -128,27 +128,30 @@ In order to reduce the code size to about 50 to 60\% of RISC-V instructions in a
 \end{figure}
 
 Fig.\ref{fig:score} tabulates the scores of the three free ISAs based on four criteria plus the list of critical compilers and OS ports. RISC-V meets all the intended requirements while being simple and clean. Because of these advantages, RISC-V gained a lot of momentum among the community and emerged as a clear winner as a choice for a free and open-source ISA. In particular, Chisel \cite{bachrach_chisel_2012} from Berkeley was a highly productive open hardware design system that became part of many silicon successes, making the case for RISC-V even stronger. 
-RISC-V continues to evolve, with the 2023 ratification of new specifications including RISC-V Profiles, Cryptography Extensions Volume II, and the IOMMU Architecture Specification.
-
+RISC-V continues to evolve, with the 2023 ratification of new specifications including RISC-V Profiles, Volume II Cryptography Extensions, and the IOMMU Architecture Specification \cite{mcmahon_risc-v_nodate}.
 %https://riscv.org/announcements/2021/12/risc-v-celebrates-incredible-year-of-growth-and-progress-ratifying-multiple-technical-specifications-launching-new-education-programs-and-accelerating-broad-industry-adoption/
 
 The rise and popularity led to the RISC-V Foundation (www.riscv.org), a nonprofit corporation that was founded in 2015 to build an open and collaborative community of software and hardware innovators based on the RISC-V ISA. In November 2018, the RISC-V Foundation announced a joint collaboration with the Linux Foundation to provide operational, technical, and strategic support.
 
-Intel's announcement of \$1 billion fund to support RISC-V chip development highlights its rising significance. RISC-V chips are now being used in devices such as earbuds, hard drives, and AI processors, with over 10 billion cores shipped. Companies are also considering RISC-V for data centers and spacecraft.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Latest Advances in RISC-V Technology
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Latest Advances in RISC-V Technology}
+Intel's announcement of a \$1 billion fund to support RISC-V chip development highlights its increasing significance. RISC-V chips are now being used in devices such as earbuds, hard drives, and AI processors, with over 10 billion cores shipped. Companies are also considering RISC-V for data centers and spacecraft \cite{noauthor_chip_nodate}.
 %https://www.technologyreview.com/2023/01/09/1064876/riscv-computer-chips-10-breakthough-technologies-2023/
 The adoption of RISC-V cores in different industries is predicted to reach 62 billion cores by 2025. A study in 2020 showed almost a quarter of ASIC and FPGA projects incorporating RISC-V cores \cite{redmond_risc-v_2021} and recent trends support this assertion.
 
+Imagination Technologies' RISC-V APXM-6200 CPU, a 64-bit in-order processor with an 11-stage pipeline, is designed for consumer and industrial applications. It offers a high performance density, outperforming the Arm Cortex-A510 in integer performance at similar clock speeds. The inclusion of an SDK with AI libraries, a Visual Studio Code extension, and TEE certification partnerships underscores the increasing adoption of RISC-V in the industry \cite{krewell_imagination_2024}.
 %https://www.eetimes.com/imagination-reveals-risc-v-processor-at-embedded-world-2024/
-Imagination Technologies' RISC-V APXM-6200 CPU, a 64-bit in-order processor with an 11-stage pipeline, is designed for consumer and industrial applications. It offers a high performance density, outperforming the Arm Cortex-A510 in integer performance at similar clock speeds. The inclusion of an SDK with AI libraries, a Visual Studio Code extension, and TEE certification partnerships underscores the increasing adoption of RISC-V in the industry.
 
+The Titanium Ti375 FPGA by Efinix integrates a quad-core RISC-V, 370,000 logic elements, and features including a Linux-capable MMU, FPU, and custom instructions, making it ideal for AI and edge computing. It also contains a dual transceiver, LPDDR4 DRAM controller, and MIPI D-PHY, all manufactured with 16 nm technology \cite{nordyk_fpga_2024}.
 %https://www.edn.com/fpga-integrates-hard-risc-v-cores/
-The Titanium Ti375 FPGA by Efinix integrates a quad-core RISC-V, 370,000 logic elements, and features including a Linux-capable MMU, FPU, and custom instructions, making it ideal for AI and edge computing. It also contains a dual transceiver, LPDDR4 DRAM controller, and MIPI D-PHY, all fabricated with 16 nm technology.
 
+The Roma laptop, the first designed for RISC-V development, features a quad-core 1.5GHz 64-bit CPU, a dual-core GPU, 8GB RAM, 128GB eMMC storage, and a 1TB SSD. It runs on the multilingual openKylin OS, aimed at helping developers create RISC-V software, indicating a significant advancement in the RISC-V ecosystem \cite{anisha_worlds_nodate}.
 %http://riscv.org/news/2023/08/worlds-first-risc-v-laptop-roma-officially-delivered-8gb-ram-and-pre-installed-with-domestic-os/
-The Roma laptop, the first designed for RISC-V development, features a quad-core 1.5GHz 64-bit CPU, a dual-core GPU, 8GB RAM, 128GB eMMC storage, and a 1TB SSD. It runs on the multilingual openKylin OS, aimed at aiding developers in creating RISC-V software, signifying a significant advancement in the RISC-V ecosystem.
 
+The R9A02G021 MCU, equipped with a 32-bit Renesas RISC-V core, 4 kB of data flash and 16 kB of ECC SRAM, is optimized for energy efficiency and performance. It includes extensive analog features, multiple timers, various serial interfaces, and regulated IOs. Renesas provides a robust ecosystem to support development, highlighting the role of the RISC-V architecture in enhancing design flexibility across industries \cite{noauthor_ultra-low_nodate}.
 %https://www.renesas.com/us/en/products/microcontrollers-microprocessors/risc-v/r9a02g021-ultra-low-power-48mhz-mcu-renesas-risc-v-cpu-core
-The R9A02G021 MCU, equipped with a 32-bit Renesas RISC-V core, 4 kB of data flash and 16 kB of ECC SRAM, is optimized for energy efficiency and performance. It includes extensive analog features, multiple timers, various serial interfaces, and regulated IOs. Renesas provides a robust ecosystem to support development, highlighting the RISC-V architecture's role in enhancing design flexibility across industries.
 
 %%Conclusion
 \section{Conclusion}

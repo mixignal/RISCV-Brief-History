@@ -1,0 +1,12 @@
+For submission to arxiv.org:
+1. created directory arXiv
+2. transferrred all necessary files 
+   - Downloaded the IEERtran class to ~/Dropbox/Literature/templates/IEEEtran
+   - copied the .cls and .bst from the above directory
+   - NOTE: arxiv needs the .bib/.bbl file name to same as .tex
+3. From Overleaf->Menu->Setting->MainDocument: pointed to the .tex file in arXiv
+4. Recompiled from scratch 
+5. Downlaoded .bbl from Overleaf: 
+   "Logs and output files" (next to Recompile) -> "Other logs and files" -> output.bbl
+6. Tar-gzip the directory tar -cvf arXiv.tar.gz arXiv/*
+7. Upload the tarball during submission   
